@@ -1,0 +1,76 @@
+body{
+  font-family: 'Open Sans', sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #b3d4fc;
+}
+
+
+.NavBar{
+  width:100%;
+  top:0;
+  position:fixed;
+  background-color: black;
+  text-align: center;
+
+}
+.NavBar>a{
+  display:inline-block;
+  padding:10px;
+  width:100px;
+  text-decoration: none;
+  float:right;
+}
+
+a{
+  font-size: 20px;
+  font-family: "Century Gothic";
+  color:white;
+}
+
+a:hover{
+  color:black;
+  font-weight: bold;
+  background-color: #cccccc;
+  box-shadow: 0 8px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(255, 255, 255, 0.1 );
+}
+
+
+
+.hex{
+  background-color: #84c1e8;
+  margin-top: 100px;
+  text-align: center;
+  font-size: 20px;
+}
+
+.IntroP{
+  max-width: 1000px;
+  padding: 30px;
+  margin: 0 auto;
+  overflow: auto;
+}
+
+.MainImg{
+  border-radius: 15% 15%;
+  width: 500px;
+  float: left;
+  margin-right: 20px;
+}
+
+h2{
+  text-align: left;
+}
+
+.IntroP>p{
+  text-align: left;
+}
+
+canvas{
+  border: 1px solid black;
+  padding-left: 0;
+  padding-right: 0;
+  margin-left: auto;
+  margin-right: auto;
+  display:block;
+}

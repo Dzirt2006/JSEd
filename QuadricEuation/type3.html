@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>type3</title>
+    <link rel="stylesheet" type="text/css" href="type3.css">
+    <script src="Type3.js"></script>
+  <script src="type3Grapf.js"></script>
+</head>
+<body>
+<nav class="NavBar">
+  <a href="">Link 1</a>
+  <a href="">Link 2</a>
+  <a href="">Link 3</a>
+  <a href="">Math</a>
+</nav>
+
+<div class="hex">
+  <div class="IntroP">
+    <img src="img/chapter09.PNG" alt="Quadric Equation" class="MainImg">
+    <h2>Hey! Welcome!</h2>
+    <p> This page builded special for solving quadric equations. Here will be diffirent variant of solving like:'Vertex', 'Quadric formula' and other. New functions will be added by the time.</p>
+  </div>
+</div>
+<div>
+
+    <a><input type="number" id="a" placeholder="+/-a">x<sub>2</sub> + </a>
+    <a><input type="number" id="b" placeholder="+/-b">x + </a>
+    <a><input type="number" id="c" placeholder="+/-c">= </a>
+    <a><input type="number" id="zero" placeholder="0"> </a>
+  <button onclick="CalcFunc()">Calculate</button>
+  <p>Solution: <span id="out"></span></p>
+  <p id="instr"></p>
+</div>
+<br>
+<canvas height='500' width='500' id="Grapf">Grapf</canvas>
+<script>/*Axis on the canvas*/
+var canvas = document.getElementById("Grapf");
+var ctx = canvas.getContext("2d");
+for(let i=0;i<500;i++){
+  ctx.fillStyle = "black";
+  ctx.fillRect(i,249,2,2);
+  ctx.fillRect(249,i,2,2);
+}</script>
+</body>
+
+
+
+</body>
+</html>
