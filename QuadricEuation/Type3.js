@@ -5,6 +5,7 @@ var zero = "zero";
 var i = "";
 
 
+
 //Main function
 function QuadricalSolver(i, t, h, z) {
   var i = getValue(i);
@@ -12,27 +13,27 @@ function QuadricalSolver(i, t, h, z) {
   if (isNaN(i) || isNaN(t)) {
     document.getElementById("instr").innerHTML = "At least you have to enter 'a' and 'b'";//запилить очистку!!!!
   } else {
-    var h=getValue(h);
-    var z=getValue(z);
-
+    var h = getValue(h);
+    var z = getValue(z);
     var C = getC(checkValue(h), checkValue(z));
 
     var D = getDiscriminant(i, t, C);
-
-    //var x=getX(a,b,D); // this variable is Array!
-    //x.forEach(arr);
-    //document.getElementById("out").innerHTML = x + " ";
-
+    if(D>=0){
     var x1 = (-1 * t + Math.sqrt(D)) / (2 * i);// put this block in personal method
     var x2 = (-1 * t - Math.sqrt(D)) / (2 * i);
     if (x1 != x2) {
       x1.toString();
       x2.toString();
-      document.getElementById("out").innerHTML = x1 + " " + x2;
+      document.getElementById("instr").innerHTML=" ";
+      document.getElementById("out").innerHTML = "x1= " + x1 + "  x2= " + x2;
     } else {
       x1.toString();
-      document.getElementById("out").innerHTML = x1;
+      document.getElementById("instr").innerHTML = "";
+      document.getElementById("out").innerHTML = "x= " + x1;
     }
+  }else{
+      document.getElementById("out").innerHTML = "Discriminant less than zero,no solution."
+      document.getElementById("instr").innerHTML=" ";}
   }
 }
 
@@ -44,7 +45,7 @@ function getValue(o) {
   return res;
 }
 
-function checkValue(i){ //checking the value for NaN
+function checkValue(i){ //checking the value for NaN only for C and Zero
   if (isNaN(i)){
     i=0;
   }else{
@@ -65,13 +66,7 @@ function arr(value) {
 
 function getDiscriminant(a, b, c) {
   let D = Math.pow(b, 2) - 4 * a * c;
-  if (D >= 0) {
-    return D;
-  } else {
-    document.getElementById("instr").innerHTML = "Discriminant less than zero. No physical roots.";
-    //make a die
-  }
-
+  return D;
 }
 
 //Doesn't work like I want. 'return' send 2 value just in array,after that i don't wont to figure out how to output values from array.

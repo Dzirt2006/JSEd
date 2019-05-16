@@ -66,6 +66,12 @@ h2{
   text-align: left;
 }
 
+#input{
+  background-color:silver;
+  text-align:center;
+  margin:50px;
+}
+
 canvas{
   border: 1px solid black;
   padding-left: 0;
